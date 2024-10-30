@@ -1,0 +1,47 @@
+#lending_widget .tab {
+	position: relative;
+	margin: 2px;
+	max-width: 600px;
+}
+#lending_widget .tab input {
+	display: none;
+}
+#lending_widget .tab label {
+	display: block;
+	background: #666;
+	color: #fff;
+	font-weight: bold;
+	padding: 10px;
+	cursor: pointer;
+}
+#lending_widget .tab label::after {
+  content: "\25b6";
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	display: block;
+	transition: all 0.4s;
+}
+#lending_widget .tab input[type=checkbox]:checked + label::after,
+#lending_widget .tab input[type=radio]:checked + label::after {
+	transform: rotate(90deg);
+}
+#lending_widget .tab-content {
+	overflow: hidden;
+	background: #CCC;
+	/* CSS animation will not work with auto height */
+	/* This is why we use max-height */
+	transition: max-height 0.4s; 
+	max-height: 0;
+}
+#lending_widget .tab-pad {
+	padding:6px;
+}
+#lending_widget .tab-content p {
+	margin: 20px;
+}
+#lending_widget .tab input:checked ~ .tab-content {
+	/* Set the max-height to a large number */
+	/* Or 100% viewport height */
+	max-height: 100vh;
+}

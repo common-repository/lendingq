@@ -1,0 +1,70 @@
+.lending_editor {
+	max-width: 600px !important;
+	min-width: 400px !important;
+}
+#lendingq_section ul {
+	list-style-type: disc;
+	padding-left: 35px;
+}
+.lendingq_notice {
+	background: #fff;
+	border: 1px solid #ccd0d4;
+	border-left-width: 4px;
+	box-shadow: 0 1px 1px rgba(0,0,0,.04);
+	margin: 5px 15px 2px;
+	padding: 1px 12px;
+	border-left-color: red;
+}
+.column-post_id { text-align: left; width:100px !important; overflow:hidden }
+.lending_table_col { 
+	min-width: 300px;
+	table-layout: fixed;
+}
+.lending_table_col tr:nth-child(even) {
+	background: #F5F5F5;
+}
+.lending_table_col tr:nth-child(odd) {
+	background: #FFF;
+}
+.lendingq_column {
+	float: left;
+	width: 50%;
+	min-width: 500px;
+}
+.lendingq_content {
+	margin:10px;
+	padding: 10px;
+	background: white;
+	border-radius: 5px;
+}
+.lendingq_row {
+	box-sizing: border-box;
+}
+.lendingq_row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+.lending_hr {
+	width:80%;
+	max-width: 900px;
+	border: 0;
+	height: 1px;
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+};
+.lending_table_col .column-name { width: 30%; }
+.lending_table_col .column-location { width: 20%; }
+.lending_table_col .column-wait_date { width: 20%; }
+.lending_table_col .column-check-out { width: 30%; }
+@media screen and (max-width: 1000px) {
+	.lendingq_column {
+		width: 100%;
+	}
+	.lending_table_col td {
+		display: block;
+		min-width: 300px;
+	}
+	.lending_table_col th {
+		display: none;
+	}
+}
